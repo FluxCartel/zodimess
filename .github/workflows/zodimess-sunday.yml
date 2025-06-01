@@ -1,0 +1,32 @@
+name: Weekly ZodiMess Update
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at 00:00 UTC
+  workflow_dispatch:  # Optional: manual trigger
+
+jobs:
+  update-horoscope:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Generate Horoscope
+        run: |
+          echo "Generating horoscope..."
+          node horoscope-generator.js
+
+      - name: Commit Changes
+        run: |
+          git config user.name "nova-bot"
+          git config user.email "actions@github.com"
+          git add index.html
+          git commit -m "✨ Weekly ZodiMess auto-update"
+          git push
