@@ -1,220 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZodiMess</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flux Cartel – Custom E-Bike Builds</title>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #FFF7ED;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
     }
-    h1, h2 {
-      font-family: 'Fredoka', cursive;
+
+    .site-wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      border: 1px solid #333;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      background-color: #111;
     }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(192, 38, 211, 0.3);
+
+    header {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1a1a1a;
     }
-    .logo {
-      max-width: 220px;
-      margin: 0 auto 1rem;
+
+    .note {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+      font-style: italic;
+      color: #bbb;
+      margin: 1rem 0;
+    }
+
+    .reviews {
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .reviews h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 1.5rem;
+    }
+
+    .review-list {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+
+    .review {
+      background: #222;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid gold;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1a1a1a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      header p, .note, .reviews h2, .review { font-size: 0.9rem; }
     }
   </style>
 </head>
-<body class="text-gray-800">
-
-<section class="p-6 text-center">
-  <img src="ZodiMess Logo.png" alt="ZodiMess logo" class="logo">
-  
-
-  <form onsubmit="showSign(event)" class="mb-10 max-w-lg mx-auto bg-white rounded-xl shadow-lg p-6 border border-pink-300">
-    <label for="birthdate" class="block font-semibold mb-2">Find Your ZodiMess Sign:</label>
-    <input type="date" id="birthdate" class="p-3 rounded border w-full">
-    <button type="submit" class="mt-4 bg-pink-600 text-white py-2 px-6 rounded hover:bg-pink-700 transition-all">Reveal My Chaos</button>
-    <p id="sign-result" class="mt-4 font-bold text-pink-700"></p>
-  </form>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-    
-    <div id="sign-0" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Saltwater Sovereign <span class="italic text-sm text-gray-600">(Scorpio)</span></h2>
-      <p class="text-sm italic text-gray-600">Oct 23 – Nov 21</p>
-      <p class="mt-2">Chaotic chill. Looks unbothered, is absolutely bothered. Wears emotional armor and Crocs. Bites for peace.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>You bite before you blink — and honestly, good. Avoid group chats and anyone who says “Can I be honest?”</p>
+<body>
+  <div class="site-wrapper">
+    <header>
+      <h1>Flux Cartel</h1>
+      <p>Custom Electric Bikes. Built with Purpose.<br><em>Established 2012. Invitation Only.</em></p>
+    </header>
+    <div class="note">
+      Due to limited availability of our artisan mechanics and finishers, all projects are by invitation only. If you’ve found this site, someone trusts you.
     </div>
-    
-    <div id="sign-1" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Jungle Centaur <span class="italic text-sm text-gray-600">(Sagittarius)</span></h2>
-      <p class="text-sm italic text-gray-600">Nov 22 – Dec 21</p>
-      <p class="mt-2">Gallop Daddy. Half-human, full chaos. You’re always running — from plans, feelings, or brunch commitments.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>You're dodging something again. Is it a task or a text? Gallop fast, but maybe pick a direction.</p>
-    </div>
-    
-    <div id="sign-2" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Star-Walker <span class="italic text-sm text-gray-600">(Capricorn)</span></h2>
-      <p class="text-sm italic text-gray-600">Dec 22 – Jan 19</p>
-      <p class="mt-2">Cosmic Boss Goat. You dream in spreadsheets. You manifest like a manager — and restructure everything, even brunch.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>You're on fire, but don’t burn the plan. A Northern Capricorn is blocking your vibe with unnecessary rules.</p>
-    </div>
-    
-    <div id="sign-3" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Deep Current <span class="italic text-sm text-gray-600">(Aquarius)</span></h2>
-      <p class="text-sm italic text-gray-600">Jan 20 – Feb 18</p>
-      <p class="mt-2">Wet Snake Energy. You seem calm but your inner world is a blender with the lid off. Keep sipping your weird tea.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Don’t clap back until Thursday. Your inner torrent needs more bandwidth first.</p>
-    </div>
-    
-    <div id="sign-4" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Golden Swimmer <span class="italic text-sm text-gray-600">(Pisces)</span></h2>
-      <p class="text-sm italic text-gray-600">Feb 19 – Mar 20</p>
-      <p class="mt-2">Emotional Tuna Melt. You cry beautifully, panic artistically, and vibe emotionally. Saltwater runs in your soul.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Let your feelings flow — but wear floaties. Someone’s weird text is not your burden.</p>
-    </div>
-    
-    <div id="sign-5" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Ashwing <span class="italic text-sm text-gray-600">(Aries)</span></h2>
-      <p class="text-sm italic text-gray-600">Mar 21 – Apr 19</p>
-      <p class="mt-2">Firebird with boundary issues. Your default setting is “spicy.” Your resting mood is “emergency.”</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Channel the blaze. Burn calories, not friendships.</p>
-    </div>
-    
-    <div id="sign-6" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Silent Coil <span class="italic text-sm text-gray-600">(Taurus)</span></h2>
-      <p class="text-sm italic text-gray-600">Apr 20 – May 20</p>
-      <p class="mt-2">Hiss With a Kiss. Calm until provoked. Your love language is snacks and silently judging people.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Stay grounded, unless a Northern Taurus delays your vibe. Then hiss — respectfully.</p>
-    </div>
-    
-    <div id="sign-7" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Laughing Beak <span class="italic text-sm text-gray-600">(Gemini)</span></h2>
-      <p class="text-sm italic text-gray-600">May 21 – Jun 20</p>
-      <p class="mt-2">Gossip Parrot. Witty, messy, multitasking through life while stirring tea in three different group chats.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Say less unless you *really* mean it. Not every comment needs a comeback… okay maybe just one.</p>
-    </div>
-    
-    <div id="sign-8" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Night Howler <span class="italic text-sm text-gray-600">(Cancer)</span></h2>
-      <p class="text-sm italic text-gray-600">Jun 21 – Jul 22</p>
-      <p class="mt-2">Lunar Drama Hound. You’re not emotional, you’re moon-tuned. Everything feels like a movie scene — and you’re the soundtrack.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>A Northern Cancer will test your patience. Cry it out, then plot your comeback.</p>
-    </div>
-    
-    <div id="sign-9" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Celestial Peacock <span class="italic text-sm text-gray-600">(Leo)</span></h2>
-      <p class="text-sm italic text-gray-600">Jul 23 – Aug 22</p>
-      <p class="mt-2">Cosmic Diva. You sparkle in 1080p. You didn’t ask for attention — but you *definitely* wore the outfit just in case.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Keep shining, just don’t self-combust. Shade is not a personal attack — sometimes it’s just a tree.</p>
-    </div>
-    
-    <div id="sign-10" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Many-Skin <span class="italic text-sm text-gray-600">(Virgo)</span></h2>
-      <p class="text-sm italic text-gray-600">Aug 23 – Sep 22</p>
-      <p class="mt-2">Shapeshift McOverthink. Changing plans, outfits, and opinions five times before lunch. Still somehow the most organized.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Let it go… or color-code it first. A Northern Virgo is about to test your Zen.</p>
-    </div>
-    
-    <div id="sign-11" class="bg-pink-200 p-6 rounded-xl shadow-xl">
-      <h2 class="text-xl font-black">Sky Glider <span class="italic text-sm text-gray-600">(Libra)</span></h2>
-      <p class="text-sm italic text-gray-600">Sep 23 – Oct 22</p>
-      <p class="mt-2">Flirty Fish Missile. Balancing grace, passive aggression, and late replies with surprising finesse.</p>
-      <p class="mt-1 font-semibold">This week:</p>
-      <p>Ghost with intention, not guilt. Some messages were never meant to be answered.</p>
-    </div>
-    
+    <section class="reviews">
+      <h2>⭐ 4.8 Stars – Based on 512 Reviews</h2>
+      <div class="stars">★★★★☆</div>
+      <div class="review-list">
+        <div class="review">
+          <strong>Jordan M., Sacramento CA</strong><br>
+          "The coding on my e-bike met the new Californian Class 3 laws to the letter. Flux Cartel doesn’t just build bikes — they build legends."
+        </div>
+        <div class="review">
+          <strong>Cass D., Gold Coast QLD</strong><br>
+          "Best decision I’ve made. The custom build was flawless, and they even tweaked the motor controller firmware for local compliance."
+        </div>
+        <div class="review">
+          <strong>Eli R., Oakland CA</strong><br>
+          "Service was next level. They don’t just weld and wire — they engineer. The clues to how good they are? It’s in the code... and the ride."
+        </div>
+        <div class="review">
+          <strong>Sammy T., Byron Bay NSW</strong><br>
+          "Beautiful craftsmanship. I docked one star only because I didn’t find the hidden /casefile page on my first go 😉."
+        </div>
+      </div>
+    </section>
+    <footer>
+      &copy; 2025 Flux Cartel. Established 2012. Projects by invitation only. Contact: <a href="mailto:info@fluxcartel.com" style="color: #ccc;">info@fluxcartel.com</a>
+    </footer>
   </div>
-</section>
-
-<section class="bg-white text-gray-800 text-sm p-6 mt-16 border-t border-gray-300 text-center">
-  <h2 class="text-lg font-semibold mb-2">✨ Star Disclaimer</h2>
-  <p>ZodiMess is not legally responsible for your romantic misfires, missed alarms, or that time you texted your ex “u up?” during a full moon.</p>
-  <p class="mt-2">Our horoscopes are 87% intuition, 12% planetary chaos, and 1% caffeine-induced improv.</p>
-  <p class="mt-2">Interpret with caution, blame with confidence. If Mercury retrograde caused your breakup, we support your narrative.</p>
-  <p class="mt-2">Consult the stars before making life decisions. Or don’t. You’re going to do what you want anyway.</p>
-</section>
-
-
-<script>
-  const taglines = [
-    "The stars made you do it.",
-    "Poor decisions, cosmically justified.",
-    "It’s not self-sabotage. It’s Saturn.",
-    "Blame the stars, not your coping skills.",
-    "This week’s forecast: feelings & regret.",
-    "12 signs. Zero accountability.",
-    "Your chaos is written in the stars.",
-    "A horoscope for people who already gave up.",
-    "The universe says it’s fine. It’s not."
-  ];
-  const taglineEl = document.querySelector("#rotating-tagline + p");
-  const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
-  taglineEl.textContent = randomTagline;
-
-  function showSign(event) {{
-    event.preventDefault();
-    const input = document.getElementById("birthdate").value;
-    const result = document.getElementById("sign-result");
-    if (!input) {{
-      result.textContent = "Please enter your birthdate.";
-      return;
-    }}
-
-    const date = new Date(input);
-    const month = date.getUTCMonth() + 1;
-    const day = date.getUTCDate();
-
-    const signs = [
-      {{{{ name: "🐊 Saltwater Sovereign", start: [10, 23], end: [11, 21] }}}},
-      {{{{ name: "🐎 Jungle Centaur", start: [11, 22], end: [12, 21] }}}},
-      {{{{ name: "🧙 Star-Walker", start: [12, 22], end: [1, 19] }}}},
-      {{{{ name: "🐍 Deep Current", start: [1, 20], end: [2, 18] }}}},
-      {{{{ name: "🐠 Golden Swimmer", start: [2, 19], end: [3, 20] }}}},
-      {{{{ name: "🔥 Ashwing", start: [3, 21], end: [4, 19] }}}},
-      {{{{ name: "🐍 Silent Coil", start: [4, 20], end: [5, 20] }}}},
-      {{{{ name: "🐦 Laughing Beak", start: [5, 21], end: [6, 20] }}}},
-      {{{{ name: "🐺 Night Howler", start: [6, 21], end: [7, 22] }}}},
-      {{{{ name: "🦚 Celestial Peacock", start: [7, 23], end: [8, 22] }}}},
-      {{{{ name: "🦎 Many-Skin", start: [8, 23], end: [9, 22] }}}},
-      {{{{ name: "🐟 Sky Glider", start: [9, 23], end: [10, 22] }}}}
-    ];
-
-    for (let i = 0; i < signs.length; i++) {{
-      const sign = signs[i];
-      const [startM, startD] = sign.start;
-      const [endM, endD] = sign.end;
-      const matches =
-        (month === startM && day >= startD) ||
-        (month === endM && day <= endD) ||
-        (startM > endM && (month === startM || month === endM));
-
-      if (matches) {{
-        result.textContent = `You are a ${{sign.name}}!`;
-        const card = document.getElementById(`sign-${{i}}`);
-        if (card) {{
-          card.scrollIntoView({{ behavior: "smooth", block: "center" }});
-          card.classList.add("ring", "ring-4", "ring-pink-400");
-          setTimeout(() => card.classList.remove("ring", "ring-4", "ring-pink-400"), 3000);
-        }}
-        return;
-      }}
-    }}
-
-    result.textContent = "Hmm, couldn’t find your sign. Try again?";
-  }}
-</script>
-
 </body>
 </html>
