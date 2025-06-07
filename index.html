@@ -1,63 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Southern Hemisphere Zodiac</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZodiMess</title>
+  <style>
     body {
-      margin: 0;
+      background-color: #fff0f5;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #1c1c1c;
-      color: #f5f5f5;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: #333;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+    .logo {
+      margin-top: 2rem;
     }
 
     .logo img {
-      width: 150px;
+      width: 120px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
     }
 
     .explanation {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #ccc;
-      padding: 0 1rem;
+      background-color: #fff0f5;
+      color: #aa0077;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      padding: 1rem;
     }
 
-    h1 {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
       margin-top: 2rem;
-      font-size: 2rem;
-      color: #ffda7d;
     }
 
-    footer {
-      margin-top: 4rem;
-      font-size: 0.8rem;
-      color: #666;
+    .card {
+      background-color: #ffb6c1;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-<div class="container">
-<div class="logo">
-<img alt="Zodiac Logo" src="logo.png"/>
-</div><div class="zodimess-explainer">🌀 Southern Hemisphere Zodiac? Because we live upside-down, mate. The Northern Hemisphere's constellations don’t even show up right down here — so we ditched Scorpio the scorpion for a saltwater croc and swapped Leo the lion for a cassowary with anger issues. Same chaotic energy, just with local animals and the correct seasons. You're not broken — the stars were just reading the wrong hemisphere.</div>
-<h1>Southern Hemisphere Zodiac</h1>
-<div class="explanation">
-      Born under the Southern Cross? Then why are you reading horoscopes based on a hemisphere you've never even sneezed in?  
-      We've replaced Leo the lion with a cassowary on a bad day and Scorpio with a saltwater croc waiting for the tide.  
-      Same drama, more teeth. Welcome to astrology — but make it Aussie.
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="ZodiMess Logo" />
     </div>
-<footer>
-      © 2025 Southern Hemisphere Zodiac. Sunburned signs, cosmic truth.
-    </footer>
-</div>
+
+    <div class="explanation">
+      🌀 <strong>Southern Hemisphere Zodiac?</strong> Because we live upside-down, mate. The Northern Hemisphere's constellations don’t even show up right down here — so we ditched Scorpio the scorpion for a saltwater croc and swapped Leo the lion for a cassowary with anger issues. Same chaotic energy, just with local animals and the correct seasons. You're not broken — the stars were just reading the wrong hemisphere.
+    </div>
+
+    <div class="grid">
+      <div class="card"><strong>Saltwater Sovereign</strong> (Scorpio)<br>Chaos chill. Emotional armor. Bites for peace.</div>
+      <div class="card"><strong>Deep Current</strong> (Cancer)<br>Calm on top, blender underneath.</div>
+      <div class="card"><strong>Silent Coil</strong> (Taurus)<br>Snacks and judgment in equal measure.</div>
+      <div class="card"><strong>Celestial Peacock</strong> (Leo)<br>Shiny, extra, possibly set on fire.</div>
+      <div class="card"><strong>Jungle Centaur</strong> (Sagittarius)<br>Galloping away from your own schedule.</div>
+      <div class="card"><strong>Golden Shimmer</strong> (Pisces)<br>Softcore emotional tsunami.</div>
+      <div class="card"><strong>Laughing Beak</strong> (Gemini)<br>Chatterbox chaos gremlin.</div>
+      <div class="card"><strong>Many-Skin</strong> (Virgo)<br>Too many plans. Not enough snacks.</div>
+      <div class="card"><strong>Sky Glider</strong> (Aquarius)<br>Ghosting with flair. Chaotic cloud energy.</div>
+      <div class="card"><strong>Night Howler</strong> (Aries)<br>Main character of your friend group’s group chat.</div>
+      <div class="card"><strong>Achering</strong> (Libra)<br>Charming. Resting drama face.</div>
+      <div class="card"><strong>Star-Walker</strong> (Capricorn)<br>Spreadsheets and manifesting. Often at brunch.</div>
+    </div>
+
+    <div class="footer">
+      🌟 Star Disclaimer: The stars made you do it. Also, we made up half of this.
+    </div>
+  </div>
 </body>
 </html>
