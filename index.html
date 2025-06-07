@@ -2,68 +2,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>ZodiMess</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       background-color: #fff0f5;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       color: #333;
     }
-
     .logo {
-      margin-top: 2rem;
       text-align: center;
     }
-
     .logo img {
       width: 120px;
     }
-
     .explainer {
       max-width: 800px;
-      margin: 1rem auto 0;
+      margin: 1rem auto;
       font-size: 1rem;
-      padding: 0 1rem;
       text-align: center;
       color: #aa0077;
     }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
-      margin-top: 2rem;
+      max-width: 960px;
+      margin: 2rem auto;
     }
-
     .card {
       background-color: #ffb6c1;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    .forecast-title {
-      text-align: center;
-      color: #aa0077;
-      font-size: 1.5rem;
-      margin: 3rem 0 1.5rem;
-    }
-
     .footer {
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #888;
       text-align: center;
+    }
+    .nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #aa0077;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -76,45 +65,27 @@
     🌀 <strong>Southern Hemisphere Zodiac?</strong> Because we live upside-down, mate. The Northern Hemisphere's constellations don’t even show up right down here — so we ditched Scorpio the scorpion for a saltwater croc and swapped Leo the lion for a cassowary with anger issues. Same chaotic energy, just with local animals and the correct seasons. You're not broken — the stars were just reading the wrong hemisphere.
   </div>
 
-  <div class="container">
-    <div class="grid">
-      <div class="card"><strong>Saltwater Sovereign</strong> (Scorpio)<br>Chaos chill. Emotional armor. Bites for peace.</div>
-      <div class="card"><strong>Deep Current</strong> (Cancer)<br>Calm on top, blender underneath.</div>
-      <div class="card"><strong>Silent Coil</strong> (Taurus)<br>Snacks and judgment in equal measure.</div>
-      <div class="card"><strong>Celestial Peacock</strong> (Leo)<br>Shiny, extra, possibly set on fire.</div>
-      <div class="card"><strong>Jungle Centaur</strong> (Sagittarius)<br>Galloping away from your own schedule.</div>
-      <div class="card"><strong>Golden Shimmer</strong> (Pisces)<br>Softcore emotional tsunami.</div>
-      <div class="card"><strong>Laughing Beak</strong> (Gemini)<br>Chatterbox chaos gremlin.</div>
-      <div class="card"><strong>Many-Skin</strong> (Virgo)<br>Too many plans. Not enough snacks.</div>
-      <div class="card"><strong>Sky Glider</strong> (Aquarius)<br>Ghosting with flair. Chaotic cloud energy.</div>
-      <div class="card"><strong>Night Howler</strong> (Aries)<br>Main character of your friend group’s group chat.</div>
-      <div class="card"><strong>Achering</strong> (Libra)<br>Charming. Resting drama face.</div>
-      <div class="card"><strong>Star-Walker</strong> (Capricorn)<br>Spreadsheets and manifesting. Often at brunch.</div>
-    </div>
+  <div class="nav">
+    💘 Curious? <a href="/compatibility">Check Compatibility</a>
+  </div>
 
-    <div style='margin-top:4rem;'>
-      
-    <h2 class="forecast-title">🔮 This Week’s Forecast</h2>
-    <div class="grid">
-      <div class="card"><strong>Saltwater Sovereign</strong> (Scorpio)<br>Your boundaries are solid. Unfortunately, so is your Wi-Fi password and now you're locked out. Stay fierce, tech warrior.</div>
-      <div class="card"><strong>Deep Current</strong> (Cancer)<br>You’ve been bottling emotions again. This week, cry in the shower while making financial decisions.</div>
-      <div class="card"><strong>Silent Coil</strong> (Taurus)<br>Snacks will betray you. Trust the crunchy ones. The soggy ones hold secrets.</div>
-      <div class="card"><strong>Celestial Peacock</strong> (Leo)<br>Everyone sees you. Literally everyone. Wear sunscreen and avoid emotionally risky selfies.</div>
-      <div class="card"><strong>Jungle Centaur</strong> (Sagittarius)<br>You booked a trip and forgot why. Doesn't matter. Adventure is a mindset. Just pack snacks.</div>
-      <div class="card"><strong>Golden Shimmer</strong> (Pisces)<br>You’re the emotional sponge of the group. This week, wring yourself out and ghost three people. You’ll feel better.</div>
-      <div class="card"><strong>Laughing Beak</strong> (Gemini)<br>Two faces. One coffee. Choose wisely. Don’t argue with your reflection again — not in public.</div>
-      <div class="card"><strong>Many-Skin</strong> (Virgo)<br>You made a spreadsheet for your feelings. Good. Now set it on fire and wing it. This is growth.</div>
-      <div class="card"><strong>Sky Glider</strong> (Aquarius)<br>Your messages are spiritually encrypted. Not everyone deserves your alien-level wisdom. Float above it.</div>
-      <div class="card"><strong>Night Howler</strong> (Aries)<br>Drama finds you like a bloodhound. Wear shades indoors. Walk slower. Let them chase you for once.</div>
-      <div class="card"><strong>Achering</strong> (Libra)<br>Everyone wants your opinion. Say nothing. Drink tea. Watch chaos unfold like it’s a theatre performance.</div>
-      <div class="card"><strong>Star-Walker</strong> (Capricorn)<br>Schedule yourself a spontaneous breakdown. Put it in your planner. Thursday feels emotionally efficient.</div>
-    </div>
+  <div class="grid">
+    <div class="card"><strong>Saltwater Sovereign</strong> (Scorpio)<br>Chaos chill. Emotional armor. Bites for peace.</div>
+    <div class="card"><strong>Deep Current</strong> (Cancer)<br>Calm on top, blender underneath.</div>
+    <div class="card"><strong>Silent Coil</strong> (Taurus)<br>Snacks and judgment in equal measure.</div>
+    <div class="card"><strong>Celestial Peacock</strong> (Leo)<br>Shiny, extra, possibly set on fire.</div>
+    <div class="card"><strong>Jungle Centaur</strong> (Sagittarius)<br>Galloping away from your own schedule.</div>
+    <div class="card"><strong>Golden Shimmer</strong> (Pisces)<br>Softcore emotional tsunami.</div>
+    <div class="card"><strong>Laughing Beak</strong> (Gemini)<br>Chatterbox chaos gremlin.</div>
+    <div class="card"><strong>Many-Skin</strong> (Virgo)<br>Too many plans. Not enough snacks.</div>
+    <div class="card"><strong>Sky Glider</strong> (Aquarius)<br>Ghosting with flair. Chaotic cloud energy.</div>
+    <div class="card"><strong>Night Howler</strong> (Aries)<br>Main character of your friend group’s group chat.</div>
+    <div class="card"><strong>Achering</strong> (Libra)<br>Charming. Resting drama face.</div>
+    <div class="card"><strong>Star-Walker</strong> (Capricorn)<br>Spreadsheets and manifesting. Often at brunch.</div>
+  </div>
 
-    </div>
-
-    <div class="footer">
-      🌟 Star Disclaimer: The stars made you do it. Also, we made up half of this.
-    </div>
+  <div class="footer">
+    🌟 Star Disclaimer: The stars made you do it. Also, we made up half of this.
   </div>
 </body>
 </html>
